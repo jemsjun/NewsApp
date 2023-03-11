@@ -1,2 +1,18 @@
 # NewsApp
-iOS Application to read news powered by NewsAPI
+## Mobile native iOS Application
+
+Created by using:
+- Swift 5
+- VIPER Design Pattern
+- Xcode
+- API from newsapi.org
+
+## Features
+
+- Show list of news categories, sources, and articles
+- View article detail from source website
+- Search news articles and news sources
+
+## Setup
+- Clone project from this repository
+- No pods / 3rd party library are used, so no need to do additional setup
