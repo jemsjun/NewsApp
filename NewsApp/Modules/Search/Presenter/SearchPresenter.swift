@@ -34,15 +34,8 @@ class SearchPresenter: SearchPresenterProtocol {
     }
     
     func apiSourceFetchSuccess(data: [Source]) {
-        var tempData: [Source] = []
-        
-        for source in data {
-            if source.name?.lowercased().contains(searchString?.lowercased() ?? "") == true {
-                tempData.append(source)
-            }
-        }
-        
-        view?.loadSourcesResult(data: tempData)
+        let filteredSource = data.filter { $0.name?.lowercased().contains(searchString?.lowercased() ?? "") == true }
+        view?.loadSourcesResult(data: filteredSource)
     }
     
     func apiArticleFetchSuccess(data: [Article]) {
