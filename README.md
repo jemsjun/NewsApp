@@ -1,5 +1,6 @@
 # NewsApp
 ## Mobile native iOS Application
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
 
 Created by using:
 - Swift 5
