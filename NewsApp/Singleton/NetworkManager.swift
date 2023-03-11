@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol NetworkManagerProtocol {
-    func parseData< T: Codable>(data: Data, modelType: T.Type) -> Result<T, Error>
-    func networkRequest<T: Codable> (from endpoint: String, modelType: T.Type, completion: @escaping (Result<T, Error>) -> ())
-}
-
-class NetworkManager: NetworkManagerProtocol {
+class NetworkManager: NSObject {
     func networkRequest<T: Codable> (from endpoint: String, modelType: T.Type, completion:   @escaping (Result<T, Error>) -> ()) {
         guard let url = URL(string: "\(endpoint)") else {
             completion(.failure(NSError(domain: "empty", code: 0, userInfo: [:])))
